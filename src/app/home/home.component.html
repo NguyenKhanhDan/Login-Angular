@@ -1,0 +1,30 @@
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    .ifo {
+        text-align: center;
+    }
+
+    .logout {
+        background: #56d8e4;
+        color: white;
+        border: none;
+        margin: 30px 0;
+        height: 45px;
+        width: 10%;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+    }
+</style>
+
+<h1>Home</h1>
+
+<div *ngIf="checkLogin()" class="ifo">
+    <h1>Hello: {{userDisplayName}}</h1>
+    <button class="logout" (click)="logout()">Logout</button>
+</div>
